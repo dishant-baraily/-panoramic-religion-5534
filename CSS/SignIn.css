@@ -1,0 +1,56 @@
+#nav-contain{
+    position: fixed;
+    border-bottom: 1px solid #ededed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 67px;
+    left: 0;
+    z-index: 999;
+    padding: 0 0 0 150px;
+    display: flex;
+}
+.btnsign button{
+    border: none;
+}
+#nav-contain  img{
+    width: 100px;
+    height: 100%;
+}
+form{
+    margin: auto;
+    text-align: center;
+    width: 250px;
+}
+form input{
+    width: 90%;
+    text-align: center;
+    margin: 5px 0;
+}
+#signinbtn{
+    width: 70px;
+    background-color: 
+    #ff7043;
+    color: white;
+    border-radius: 10px;
+}
+#signupbtn{
+    width: 70px;
+    background-color: 
+    #ff7043;
+    color: white;
+    border-radius: 10px;
+}
+h1{
+    color: #ff7043;
+}
+#signcss{
+    margin-top: 100px;
+}
+.btnsign{
+    width: 200px;
+    margin-left: 800px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
