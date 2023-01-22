@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Furniture Shopping</title>
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/xcthvj8eous3atuqybxm">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/Home.css">
+</head>
+<body>
+    <div style="height: 70px; text-align: center; align-items: center;" id="nav-contain">
+        <a style="height: 40px;" href="Home.html">
+            <img   src="data:image/png;base64,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" alt="">
+        </a>
+        <div class="index">
+            <div style="width: 80%;display: flex;align-items: center;">
+                <input style="width: 100%; height: 100%;border-radius: 0%;" type="text" placeholder="Your door to happiness opens with a search">
+            </div>
+            <div style="display: flex;">
+                <a style="height: 40px;" href="https://www.pepperfry.com/contact-us.html?type=header">
+                    <img src="https://ii1.pepperfry.com/images/svg/web21-header-help-icon.svg" alt="">
+                </a>
+                <a style="height: 40px;"  href="SignIn.html">
+                    <img src="https://ii1.pepperfry.com/images/svg/icon-profile-21.svg?v=1" alt="">
+                </a>
+                <a style="height: 40px;" href="Cart.html">
+                    <img src="https://ii1.pepperfry.com/images/svg/icon-cart-21.svg" alt="">
+                </a>
+            </div>
+            
+        </div> 
+    </div>
+    <div id="cat">
+        <div>
+            <a href="./Products.html">Furniture</a>
+            <div class="hide">
+
+            </div>
+        </div>
+        <div>
+            <a href="">Home Decor</a>
+            <div class="hide">
+
+            </div>
+        </div>
+        <div>
+            <a href="">Lamps & Lighting</a>
+            <div class="hide">
+
+            </div>
+        </div>
+        <div>
+            <a href="">Kitchen & Dining</a>
+            <div class="hide">
+
+            </div>
+        </div>
+        <div>
+            <a href="">Furnishings</a>
+            <div class="hide">
+
+            </div>
+        </div>
+        <div>
+            <a href="">Mattresses</a>
+            <div class="hide">
+
+            </div>
+        </div>
+        <div>
+            <a href="">Appliances</a>
+            <div class="hide">
+
+            </div>
+        </div>
+        <div>
+            <a href="">Pets</a>
+            <div class="hide">
+
+            </div>
+        </div>
+        <div>
+            <a href="">Modular</a>
+            <div class="hide">
+
+            </div>
+        </div>
+        <div>
+            <a href="">Gift Cards</a>
+            <div class="hide">
+
+            </div>
+        </div>
+    </div>
+    <div style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px inset;width: 100%;height: 10px;"></div>
+    <div id="body">
+        <div class="slidiv">
+            <div class="slider">
+                <a id="mainA" href="">
+                    <img id="mainImage" height="100%" width="100%" src="https://ii1.pepperfry.com/media/wysiwyg/banners/Web_Promo_2x_2201_ETOM.jpg">
+                </a> 
+            </div>
+            <div style="height: 100%; width: 20%; margin-left: 20px;">
+                <img height="100%" width="100%" src="https://ii2.pepperfry.com/media/wysiwyg/banners/RHS-WEB_2x_1301_16-jan.jpg" alt="">
+            </div>
+        </div>
+        <div style="height: 30px;" ></div>
+        <div style="width: 90%;margin:auto;">
+            <img width="100%" src="https://ii3.pepperfry.com/media/wysiwyg/banners/2021_web_regBanner1x_1901.jpg" alt="">
+        </div>
+        <div style="height: 30px;" ></div>
+        <div style="display: flex; width: 90%;margin: auto;justify-content: space-around;">
+            <div style="text-align: center;" >
+                <div style="width: 100%;height: 80%;">
+                    <img width="97%" height="100%" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section4_web_04012023_1.jpg" alt="">
+                </div>
+                <p>Shop Living Room ➞</p>
+            </div>
+            <div style="text-align: center;" >
+                <div style="width: 100%;height: 80%;">
+                    <img width="97%" height="100%" src="https://ii3.pepperfry.com/media/wysiwyg/banners/Hp_section4_web_04012023_2.jpg" alt="">
+                </div>
+                <p>Shop Bedroom ➞</p>
+            </div>
+            <div style="text-align: center;" >
+                <div style="width: 100%;height: 80%;">
+                    <img width="97%" height="100%" src="https://ii1.pepperfry.com/media/wysiwyg/banners/Hp_section4_web_04012023_3.jpg" alt="">
+                </div>
+                <p>Shop Dining Room ➞</p>
+            </div>
+            <div style="text-align: center;" >
+                <div style="width: 100%;height: 80%;">
+                    <img width="97%" height="100%" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section4_web_04012023_4.jpg" alt="">
+                </div>
+                <p>Shop Study Room ➞</p>
+            </div>
+        </div>
+        <div style="width: 90%;margin: auto;font-family: Manrope,sans-serif;">
+            <h1>What The Fry Deals</h1>
+        </div>
+        <div class="fryD">
+            <a href="">
+                    <div>
+                        <img width="97%" height="100%" src="https://ii3.pepperfry.com/media/wysiwyg/banners/HP_Deal_web_21-01-2023_1.jpg" alt="">
+                    </div>
+                    <h4>For ₹219 at 69% Off</h4>
+                    <p style="color: #848484;">Floral Bedding</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii1.pepperfry.com/media/wysiwyg/banners/HP_Deal_web_21-01-2023_2.jpg" alt="">
+                </div>
+                <h4>For ₹99 at 83% Off</h4>
+                <p style="color: #848484;">Areca Palm Plant in Pot</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii2.pepperfry.com/media/wysiwyg/banners/HP_Deal_web_21-01-2023_3.jpg" alt="">
+                </div>
+                <h4>For ₹99 at 89% Off</h4>
+                <p style="color: #848484;">Jute Laundry Basket</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii3.pepperfry.com/media/wysiwyg/banners/HP_Deal_web_21-01-2023_4.jpg" alt="">
+                </div>
+                <h4>For ₹119 at 68% Off</h4>
+                <p style="color: #848484;">Fridge Water Bottles (Set of 6)</p>
+            </a>
+        </div>
+        <!-- slider -->
+        <div style="width: 90%;margin: auto;font-family: Manrope,sans-serif;">
+            <h1>Inspire and Get Inspired</h1>
+        </div>
+        <div style="z-index: 1;" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <a href="">
+                  <img src="https://cdn.taggbox.com/v7/https%3A%2F%2Fcloud.taggbox.com%2Fmedia%2F2022%2F07%2F183375%2Fimage_1002854129-1674382428.webp?w=400&func=cover&ci_url_encoded=1" alt="">
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="">
+                  <img src="https://cdn.taggbox.com/v7/https%3A%2F%2Fcloud.taggbox.com%2Fmedia%2F2022%2F07%2F183375%2Fimage_119006892-1674385529.jpg?w=400&func=cover&ci_url_encoded=1" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="">
+                  <img src="https://cdn.taggbox.com/v7/https%3A%2F%2Fcloud.taggbox.com%2Fmedia%2F2022%2F07%2F183375%2Fimage_961293016-1674385578.webp?w=400&func=cover&ci_url_encoded=1" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="">
+                  <img src="https://cdn.taggbox.com/v7/https%3A%2F%2Fi.pinimg.com%2Foriginals%2F54%2F51%2F29%2F545129d3f58c0810e8f59a69c6244034.jpg?w=400&func=cover&ci_url_encoded=1" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="">
+                  <img src="https://cdn.taggbox.com/v7/https%3A%2F%2Fcloud.taggbox.com%2Fmedia%2F2022%2F07%2F183375%2Fimage_1700455507-1674385553.webp?w=400&func=cover&ci_url_encoded=1" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="">
+                  <img src="https://cdn.taggbox.com/v7/https%3A%2F%2Fcloud.taggbox.com%2Fmedia%2F2022%2F07%2F183375%2Fimage_295679386-1674385553.webp?w=400&func=cover&ci_url_encoded=1" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="">
+                  <img src="https://cdn.taggbox.com/v7/https%3A%2F%2Fcloud.taggbox.com%2Fmedia%2F2022%2F07%2F183375%2Fimage_642112212-1674385553.jpg?w=400&func=cover&ci_url_encoded=1" alt="">
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="">
+                      <img src="https://cdn.taggbox.com/v7/https%3A%2F%2Fi.pinimg.com%2Foriginals%2F81%2Fd7%2F97%2F81d797d7179ac02d09c15f36d8cfdb4d.jpg?w=400&func=cover&ci_url_encoded=1" alt="">
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="">
+                      <img src="https://cdn.taggbox.com/v7/https%3A%2F%2Fcloud.taggbox.com%2Fmedia%2F2022%2F07%2F183375%2Fimage_838074606-1674385553.jpg?w=400&func=cover&ci_url_encoded=1" alt="">
+                      
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="">
+                      <img src="https://cdn.taggbox.com/v7/https%3A%2F%2Fcloud.taggbox.com%2Fmedia%2F2022%2F07%2F183375%2Fimage_1473417579-1674385577.webp?w=400&func=cover&ci_url_encoded=1" alt="">
+                      
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="">
+                      <img src="https://cdn.taggbox.com/v7/https%3A%2F%2Fcloud.taggbox.com%2Fmedia%2F2022%2F07%2F183375%2Fimage_80155795-1674357888.jpg?w=400&func=cover&ci_url_encoded=1" alt="">
+                      
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="">
+                      <img src="https://cdn.taggbox.com/v7/https%3A%2F%2Fcloud.taggbox.com%2Fmedia%2F2022%2F07%2F183375%2Fimage_339668457-1674385578.jpg?w=400&func=cover&ci_url_encoded=1" alt="">
+                      
+                  </a>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        <!-- bvncm,x -->
+        <div style="width: 90%;margin: auto;font-family: Manrope,sans-serif;">
+            <h1>Trends In Furniture And Decor</h1>
+        </div>
+        <div class="fryD">
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii1.pepperfry.com/media/wysiwyg/banners/Hp_section6_web_04012023_1.jpg" alt="">
+                </div>
+                <h4>Pantone Color Sofas</h4>
+                <p style="color: #848484;">Explore Starting ₹10939 ➞</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section6_web_04012023_2.jpg" alt="">
+                </div>
+                <h4>Gentle Lighting Shelf Lamps</h4>
+                <p style="color: #848484;">Explore Starting ₹1999 ➞ </p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii3.pepperfry.com/media/wysiwyg/banners/Hp_section6_web_04012023_3.jpg" alt="">
+                </div>
+                <h4>Maximalist Pieces By Chumbak</h4>
+                <p style="color: #848484;">Explore Starting ₹4495 ➞</p>
+            </a>
+        </div>
+        <div style="width: 90%;margin: auto;font-family: Manrope,sans-serif;">
+            <h1>New Arrivals</h1>
+        </div>
+        <div class="fryD">
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii1.pepperfry.com/media/wysiwyg/banners/Hp_section7_web_04012023_1.jpg" alt="">
+                </div>
+                <h4>Premium Office Chairs</h4>
+                <p style="color: #848484;">06+ Options </p>
+                <p style="color: #848484;">Starting ₹14499</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section7_web_04012023_2.jpg" alt="">
+                </div>
+                <h4>Unique Collectibles</h4>
+                <p style="color: #848484;">120+ Options</p>
+                <p style="color: #848484;">Starting ₹249</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii3.pepperfry.com/media/wysiwyg/banners/Hp_section7_web_04012023_3.jpg" alt="">
+                </div>
+                <h4>Printed Cushion Covers</h4>
+                <p style="color: #848484;">150+ Options</p>
+                <p style="color: #848484;">Starting ₹149</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii1.pepperfry.com/media/wysiwyg/banners/Hp_newarrival_17012023_web.jpg" alt="">
+                </div>
+                <h4>Upholstered Beds</h4>
+                <p style="color: #848484;">70+ Options</p>
+                <p style="color: #848484;">Starting ₹9199</p>
+            </a>
+        </div>
+        <div style="width: 90%;margin: auto;font-family: Manrope,sans-serif;">
+            <h1>The Winter Edit</h1>
+        </div>
+        <div class="fryD">
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section8_web_04012023_1.jpg" alt="">
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii3.pepperfry.com/media/wysiwyg/banners/Hp_section8_web_04012023_2.jpg" alt="">
+                </div>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii1.pepperfry.com/media/wysiwyg/banners/Hp_section8_web_04012023_3.jpg" alt="">
+                </div>
+            </a>
+        </div>
+        <div style="width: 90%;margin: auto;font-family: Manrope,sans-serif;">
+            <h1>Top Brands On Pepperfry</h1>
+        </div>
+        <div class="fryD">
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section9_web_04012023_1.jpg" alt="">
+                </div>
+                <h4>Popular For Sofas</h4>
+                <p style="color: #848484;">600+ Options </p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii3.pepperfry.com/media/wysiwyg/banners/Hp_section9_web_04012023_2.jpg" alt="">
+                </div>
+                <h4>Popular For Office Chairs</h4>
+                <p style="color: #848484;">45+ Options</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii1.pepperfry.com/media/wysiwyg/banners/Hp_section9_web_04012023_3.jpg" alt="">
+                </div>
+                <h4>Popular For Home Decor</h4>
+                <p style="color: #848484;">290+ Options</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section9_web_04012023_4.jpg" alt="">
+                </div>
+                <h4>Popular For Serveware</h4>
+                <p style="color: #848484;">120+ Options</p>
+            </a>
+        </div>
+        <div style="width: 90%;margin: auto;font-family: Manrope,sans-serif;">
+            <h1>Inspiration From Our Blog</h1>
+        </div>
+        <div class="fryD">
+            <a href="">
+                <div>
+                    <img width="97%" height="90%" src="https://ii3.pepperfry.com/media/wysiwyg/banners/Hp_section10_web_04012023_1.jpg" alt="">
+                </div>
+                <p style="color: #848484;line-height: 0px;">How to Declutter Your House Based on Your</p>
+                <p style="color: #848484;line-height: 0px;"> Personality Type? | Read More ➞</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii1.pepperfry.com/media/wysiwyg/banners/Hp_section10_web_04012023_2.jpg" alt="">
+                </div>
+                <p style="color: #848484;">5 Elegant Ideas for Your Dreamy Modern</p>
+                <p style="color: #848484;">Master Bedroom | Read More ➞</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section10_web_04012023_3.jpg" alt="">
+                </div>
+                <p style="color: #848484;">7 Decor Ideas to Spruce up Your</p>
+                <p style="color: #848484;"> Hallway | Read More ➞</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii3.pepperfry.com/media/wysiwyg/banners/Hp_section10_web_04012023_4.jpg" alt="">
+                </div>
+                <p style="color: #848484;">8 Trends You Can Use This Holiday Season </p>
+                <p style="color: #848484;">in Your Home | Read More ➞</p>
+            </a>
+        </div>
+        <div style="width: 90%;margin: auto;font-family: Manrope,sans-serif;">
+            <h1>Customers Speak</h1>
+        </div>
+        <div class="fryD">
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii1.pepperfry.com/media/wysiwyg/banners/Testimonial_web_261221_7.jpg" alt="">
+                </div>
+                <h4>Suman Senapatia</h4>
+                <p style="color: #848484;">Visakhapatnam</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii3.pepperfry.com/media/wysiwyg/banners/happy_customer_block_2_2906_0222.png" alt="">
+                </div>
+                <h4>Satya Madhana</h4>
+                <p style="color: #848484;">Secunderabad</p>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Testimonial_web_261221_9.jpg" alt="">
+                </div>
+                <h4>Baba Kattubadi</h4>
+                <p style="color: #848484;">Hyderabad</p>
+            </a>
+        </div>
+        <div style="width: 90%;margin: auto;font-family: Manrope,sans-serif;">
+            <h1>Need Help Buying?</h1>
+        </div>
+        <div class="fryD">
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii1.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_1.jpg" alt="">
+                </div>
+                <h4>Here's How To Choose The </h4>
+                <h4>Right Sofa</h4>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii2.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_2.jpg" alt="">
+                </div>
+                <h4>How To Buy A Perfect Bed </h4>
+                <h4>For Your Room</h4>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii3.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_3.jpg" alt="">
+                </div>
+                <h4>Your Guide To Buy The </h4>
+                <h4>Perfect Mattress</h4>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii1.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_4.jpg" alt="">
+                </div>
+                <h4>Everything About Cabinets </h4>
+                <h4>And Sideboards</h4>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii2.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_5.jpg" alt="">
+                </div>
+                <h4>What To Look For While</h4>
+                <h4> Buying A Chair</h4>
+            </a>
+            <a href="">
+                <div>
+                    <img width="97%" height="100%" src="https://ii3.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_6.jpg" alt="">
+                </div>
+            </a>
+        </div>
+      <div style="background-color: #f2f5f7;" id="footer">
+        <div style="height: 330px;">
+            <div style="height: 50px;"></div>
+            <div style="display: flex;width: 80%;margin: auto; height: 100%;justify-content: space-between;color: black;font-family: 'Inter', sans-serif">
+                <div class="highlight" style="line-height: 13px;" >
+                    <p>Useful Links</p>
+                    <p style="font-size: 12px;color: #939393;">About Us</p>
+                    <p style="font-size: 12px;color: #939393;">Our Blog</p>
+                    <p style="font-size: 12px;color: #939393;">Careers</p>
+                    <p style="font-size: 12px;color: #939393;">Corporate Governance</p>
+                    <p style="font-size: 12px;color: #939393;">Pepperfry In the News</p>
+                    <p style="font-size: 12px;color: #939393;">Find A Studio</p>
+                    <p style="font-size: 12px;color: #939393;">Gift Cards</p>
+                    <p style="font-size: 12px;color: #939393;">Brands</p>
+                    <p style="font-size: 12px;color: #939393;">Customer Reviews</p>
+                </div>
+                <div class="highlight" style="line-height: 13px;" >
+                    <p>Partners</p>
+                    <p style="font-size: 12px;color: #939393;">Sell With Us</p>
+                    <p style="font-size: 12px;color: #939393;">Become a Franchisee</p>
+                    <p style="font-size: 12px;color: #939393;">Design For Us</p>
+                    <p style="font-size: 12px;color: #939393;">Pepperfry Marketplace Policies</p>
+                    <p style="font-size: 12px;color: #939393;">Login to Your Merchant Dashboard</p>
+                    <p style="font-size: 12px;color: #939393;">Important : GST and You</p>
+                    <p style="font-size: 12px;color: #939393;">Corporate Enquiries</p>
+                </div>
+                <div class="highlight" style="line-height: 13px;" >
+                    <p>Need Help?</p>
+                    <p style="font-size: 12px;color: #939393;">Contact Us</p>
+                    <p style="font-size: 12px;color: #939393;">Returns & Refund</p>
+                    <p style="font-size: 12px;color: #939393;">Track Your Order</p>
+                    <p style="font-size: 12px;color: #939393;">FAQs</p>
+                    <p style="font-size: 12px;color: #939393;">Buy on Phone</p>
+                </div>
+                <div class="highlight" style="line-height: 13px;" >
+                    <p>Download App</p>
+                        <a style="display: block;width: 200px;height: 60px;" href="https://apps.apple.com/in/app/pepperfry/id972047429">
+                            <img width="100%" height="100%" style="border-radius: 8px;" src="data:image/png;base64,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" alt="">
+                        </a>
+                        <div style="height: 20px;"></div>
+                        <a style="display: block;width: 200px;height: 60px;" href="https://play.google.com/store/apps/details?id=com.app.pepperfry">
+                            <img width="100%" height="100%" style="border-radius: 5px;" src="data:image/png;base64,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" alt="">
+                        </a>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%; height: 160px;">
+            <div style="display: flex;width: 90%;margin: auto;height: 100%;justify-content: space-around;">
+                <div>
+                    <p>Popular Categories</p>
+                    <p style="font-size: 12px;color: #939393;">
+                        Queen Size Beds, King Size Beds, Coffee Tables, Dining Sets, <br>
+                        Recliners, Sofa cum Beds, Rocking Chairs, Cabinets, Book <br>
+                        Shelves, TV Unit, Wardrobes, Outdoor Furniture, Bar Cabinets, <br> 
+                        Wall Shelves, Photo Frames, Bed Sheets, Mattresses, Table <br>
+                        Cloth, Living Room Furniture, Study Tables, Dining Room <br>
+                        Furniture, Office Furniture, Bed Room Furniture, Dining Table, <br> 
+                        Beds, Sofas, Sofa Set, Trundle Bed
+                    </p>
+                </div>
+                <div>
+                    <p>Popular Brands</p>
+                    <p style="font-size: 12px;color: #939393;">
+                        Mintwud,Woodsworth, CasaCraft, Amberville, Mudramark, <br>
+                        Bohemiana,Clouddio, Spacewood, Durian, Green Soul, Godrej <br> 
+                        Interio,Nilkamal, Orange Tree , HomeTown , Duroflex, <br>
+                        Sleepyhead ,Peps India , NestAsia , Jaipur Rugs , Obettee, <br>
+                        Eliante by Jainsons , @Home , Bombay Dyeing , Kapoor E <br> 
+                        Illuminaton ,Ellementry , Chumbak , Philips , Jaipur Fabric, <br>
+                        Maspar,India Circus by Krsnaa Mehta
+                    </p>
+                </div>
+                <div>
+                    <p>Cities we deliver to</p>
+                    <p style="font-size: 12px;color: #939393;">
+                        Bengaluru, Mumbai, Navi Mumbai, Delhi, Hyderabad, Pune, <br>
+                        Chennai, Gurgaon, Kolkata, Noida, Goa, Ghaziabad, <br> 
+                        Ahmedabad, Coimbatore, Faridabad, Jaipur, Lucknow, Kochi, <br> 
+                        Visakhapatnam, Chandigarh, Vadodara, Nagpur, <br> 
+                        Thiruvananthapuram, Indore, Mysore, Bhopal, Surat, <br> 
+                        Jalandhar, Patna, Ludhiana, Nashik, Madurai, Kanpur, <br> 
+                        Aurangabad and many more
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div style="height: 50px;"></div>
+        <hr style="width: 85%;margin: auto;height: 1px;background-color: #dadada;border: none;">
+        <div style="width: 100%; height: 160px;">
+            <div style="display: flex; width: 80%;margin: auto;justify-content: space-around;">
+                <div>
+                    <p>We accept</p>
+                    <div style="display: flex;justify-content: space-between;">
+                        <div>
+                            <a style="display: block;" href="">
+                                <img width="97%" src="https://ii1.pepperfry.com/images/web21-footer-visacard-logo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a style="display: block;" href="">
+                                <img width="97%" src="https://ii1.pepperfry.com/images/web21-footer-mastercard-logo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a style="display: block;" href="">
+                                <img width="97%" src="https://ii1.pepperfry.com/images/web21-footer-maestrocard-logo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a style="display: block;" href="">
+                                <img width="97%" src="https://ii1.pepperfry.com/images/web21-footer-amexcard-logo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a style="display: block;" href="">
+                                <img width="97%" src="https://ii1.pepperfry.com/images/web21-footer-rupaycard-logo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a style="display: block;" href="">
+                                <img width="97%" src="https://ii1.pepperfry.com/images/web21-footer-dinnerscard-logo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a style="display: block;" href="">
+                                <img width="97%" src="https://ii1.pepperfry.com/images/web21-footer-wallet-logo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a style="display: block;" href="">
+                                <img width="97%" src="https://ii1.pepperfry.com/images/web21-footer-internet-banking-logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p>Like what you see? You'll like us even more here</p>
+                    <div style="display: flex;justify-content: space-between;">
+                        <div>
+                            <a style="display: block;" href="">
+                                <img src="https://ii1.pepperfry.com/images/web21-footer-facebook-logo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a style="display: block;" href="">
+                                <img src="https://ii1.pepperfry.com/images/web21-footer-twitter-logo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a style="display: block;" href="">
+                                <img src="https://ii1.pepperfry.com/images/web21-footer-youtube-logo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a style="display: block;" href="">
+                                <img src="https://ii1.pepperfry.com/images/web21-footer-instagram-logo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a style="display: block;" href="">
+                                <img src="https://ii1.pepperfry.com/images/web21-footer-linkedin-logo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a style="display: block;" href="">
+                                <img src="https://ii1.pepperfry.com/images/web21-footer-pinterest-logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr style="width: 85%;margin: auto;height: 1px;background-color: #dadada;border: none;">
+      </div>
+    </div>
+</body>
+</html>
+<script>
+    var myImage = document.getElementById("mainImage");
+    var myA = document.getElementById("mainA");
+
+    var imageArray = [  
+        "https://ii1.pepperfry.com/media/wysiwyg/banners/Web_Promo_2x_2201_ETOM.jpg",
+        "https://ii1.pepperfry.com/media/wysiwyg/banners/Hp_section2_web_04012023_3.jpg",
+        "https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section2_web_04012023_1.jpg",
+        "https://ii3.pepperfry.com/media/wysiwyg/banners/Hp_section2_web_04012023_2.jpg",
+        
+    ];
+    var imageIndex = 0;
+    function changeImage() {
+        myImage.setAttribute("src",imageArray[imageIndex]);
+        imageIndex++;
+        if (imageIndex === imageArray.length) {
+            imageIndex = 0;
+        }
+    }
+    setInterval(changeImage,3000);
+
+    
+</script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    slidesPerGroup: 4,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
